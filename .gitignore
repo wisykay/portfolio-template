@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.env*.local
+
+# unused game assets (investigation room / 3D characters)
+/public/game-build
+/public/assets
+/threejs-capacitor-ios-game-main
