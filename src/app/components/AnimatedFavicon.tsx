@@ -22,14 +22,16 @@ function buildFavicon(bg: string) {
 export function AnimatedFavicon() {
   useEffect(() => {
     let i = 0;
-    const link =
-      document.querySelector<HTMLLinkElement>('link[rel="icon"]') ??
-      (() => {
-        const el = document.createElement("link");
-        el.rel = "icon";
-        document.head.appendChild(el);
-        return el;
-      })();
+    // Remove all existing icon links so browser uses ours
+    document
+      .querySelectorAll<HTMLLinkElement>('link[rel="icon"]')
+      .forEach((el) => el.remove());
+
+    const link = document.createElement("link");
+    link.rel = "icon";
+    link.type = "image/svg+xml";
+    document.head.appendChild(link);
+    link.href = buildFavicon(colors[0]);
 
     const interval = setInterval(() => {
       i = (i + 1) % colors.length;
