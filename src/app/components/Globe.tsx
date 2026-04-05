@@ -23,13 +23,7 @@ const locations: { lat: number; lng: number; label: string; year: string; flag: 
     { title: "UX Lead", company: "GoBeyond Group" },
     { title: "UX Engineer", company: "Amaris / Philips" },
   ]},
-  { lat: 6.25, lng: -75.57, label: "Medellín", year: "2017", flag: "🇨🇴", jobs: [
-    { title: "UX Analyst", company: "Banistmo (Nequi)" },
-  ]},
   { lat: 18.47, lng: -66.11, label: "Puerto Rico", year: "2023", flag: "🇵🇷", jobs: [
-    { title: "UX Lead", company: "GoBeyond (Gustazos)" },
-  ]},
-  { lat: 18.11, lng: -77.30, label: "Jamaica", year: "2024", flag: "🇯🇲", jobs: [
     { title: "UX Lead", company: "GoBeyond (Gustazos)" },
   ]},
   { lat: 37.77, lng: -122.42, label: "San Francisco", year: "2025", flag: "🇺🇸", jobs: [
@@ -168,7 +162,7 @@ export default function Globe() {
     <div className="flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:gap-6">
       {/* Left — Career locations */}
       <div className="flex flex-col gap-0.5 order-2 lg:order-1">
-        <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-white/20">
+        <p className="mb-2 text-[11px] font-semibold uppercase tracking-wider text-white/60">
           3 continents &middot; 8 cities &middot; 12 years
         </p>
         {locations.map((loc, i) => (
@@ -182,13 +176,13 @@ export default function Globe() {
                   ? "bg-white/[0.08] text-white"
                   : hovered === i
                   ? "bg-white/[0.04] text-white"
-                  : "text-white/30 hover:text-white/50"
+                  : "text-white/70 hover:text-white"
               }`}
             >
               <span className="text-sm">{loc.flag}</span>
               <span className="text-[13px] font-medium">{loc.label}</span>
-              <span className="ml-auto text-[11px] text-white/15">{loc.year}</span>
-              <span className={`text-[10px] text-white/20 transition-transform duration-200 ${expanded === i ? "rotate-90" : ""}`}>▶</span>
+              <span className="ml-auto text-[11px] text-white/50">{loc.year}</span>
+              <span className={`text-[10px] text-white/50 transition-transform duration-200 ${expanded === i ? "rotate-90" : ""}`}>▶</span>
             </button>
             {/* Expanded jobs */}
             {expanded === i && (
@@ -196,9 +190,9 @@ export default function Globe() {
                 {loc.jobs.map((job) => (
                   <div key={job.company} className="flex items-center gap-2 rounded px-2 py-1 text-[12px]">
                     <span className="h-1 w-1 shrink-0 rounded-full bg-[#50DCA4]" />
-                    <span className="whitespace-nowrap text-white/50">{job.title}</span>
-                    <span className="text-white/20">@</span>
-                    <span className="whitespace-nowrap text-white/40">{job.company}</span>
+                    <span className="whitespace-nowrap text-white/80">{job.title}</span>
+                    <span className="text-white/50">@</span>
+                    <span className="whitespace-nowrap text-white/70">{job.company}</span>
                   </div>
                 ))}
               </div>
@@ -224,19 +218,19 @@ export default function Globe() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
           </span>
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-white/20">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-white/60">
             Live visitors
           </p>
         </div>
         {visitors.map((v, i) => (
           <div
             key={v.city + i}
-            className="flex items-center gap-2 rounded-lg px-2 py-1 text-[12px] text-white/30 transition-all duration-300"
+            className="flex items-center gap-2 rounded-lg px-2 py-1 text-[12px] text-white/70 transition-all duration-300"
             style={{ opacity: i === 0 ? 1 : 0.6 - i * 0.1 }}
           >
             <span className="text-sm">{v.flag}</span>
-            <span className="text-white/40">{v.city}</span>
-            <span className="ml-auto text-[10px] text-white/15">{v.time}</span>
+            <span className="text-white/70">{v.city}</span>
+            <span className="ml-auto text-[10px] text-white/50">{v.time}</span>
           </div>
         ))}
       </div>

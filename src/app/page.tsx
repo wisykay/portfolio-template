@@ -61,7 +61,7 @@ export default function HubPage() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="mb-8 flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]"
         >
-          <span className="text-2xl font-semibold tracking-tight text-white/80">
+          <span className="text-2xl font-semibold tracking-tight text-white">
             K
           </span>
         </motion.div>
@@ -82,7 +82,7 @@ export default function HubPage() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-2 text-center text-xl font-medium text-white/40"
+          className="mb-2 text-center text-xl font-medium text-white"
         >
           Senior UX Designer
         </motion.p>
@@ -91,7 +91,7 @@ export default function HubPage() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-10 max-w-lg text-center text-base leading-relaxed text-white/30"
+          className="mb-10 max-w-lg text-center text-base leading-relaxed text-white/70"
         >
           This isn&apos;t your typical portfolio. Pick how you want to
           experience my work — no PDFs, no boring scroll.
@@ -131,7 +131,7 @@ export default function HubPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="mt-10 text-xs text-white/15"
+          className="mt-10 text-xs text-white/60"
         >
           Choose your experience
         </motion.p>
@@ -175,17 +175,17 @@ function ExperienceCard({
           {experience.icon}
         </div>
 
-        <h2 className="mb-1.5 text-base font-semibold text-white/90">
+        <h2 className="mb-1.5 text-base font-semibold text-white">
           {experience.title}
         </h2>
-        <p className="mb-4 text-[13px] leading-relaxed text-white/30">
+        <p className="mb-4 text-[13px] leading-relaxed text-white/70">
           {experience.description}
         </p>
 
         <div
           className="flex items-center gap-1.5 text-[13px] font-medium transition-all duration-300"
           style={{
-            color: hovered ? experience.accent : "rgba(255,255,255,0.25)",
+            color: hovered ? experience.accent : "rgba(255,255,255,0.7)",
           }}
         >
           <span>Enter</span>
