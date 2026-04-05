@@ -14,8 +14,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Explore my work through different interactive experiences.",
+  title: "Kay — Senior UX Designer",
+  description:
+    "12 years designing products people love. Explore my work through AI chat, a Spanish learning game, and full case studies.",
+  openGraph: {
+    title: "Kay — Senior UX Designer",
+    description:
+      "12 years designing products people love. Explore my work through AI chat, a Spanish learning game, and full case studies.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
