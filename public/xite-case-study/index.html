@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XITE — Sleep Study AI Platform | Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=47">
+  <style>
+    .kayilo-back-btn{position:fixed;top:16px;left:16px;z-index:99999;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.95);color:#111;border:1px solid rgba(0,0,0,0.08);border-radius:9999px;font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:600;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,0.08);backdrop-filter:blur(8px);transition:all 0.2s ease}
+    .kayilo-back-btn:hover{background:#fff;transform:translateX(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+  </style>
+</head>
+<body>
+  <a href="/portfolio" class="kayilo-back-btn">&larr; Back to Portfolio</a>
+
+  <!-- Grain -->
+  <div class="grain">
+    <svg><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noiseFilter)"/></svg>
+  </div>
+
+  <!-- Nav -->
+  <nav class="topnav" id="topnav">
+    <span class="topnav-brand">XITE</span>
+    <div class="topnav-links">
+      <a href="#problem" class="topnav-link">Problem</a>
+      <a href="#legacy" class="topnav-link">Legacy</a>
+      <a href="#insight" class="topnav-link">Insight</a>
+      <a href="#process" class="topnav-link">Process</a>
+      <a href="#product" class="topnav-link">Product</a>
+      <a href="#impact" class="topnav-link">Impact</a>
+      <a href="#reflections" class="topnav-link">Learnings</a>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO — PRODUCT OWNS THE VIEWPORT
+       ========================================== -->
+  <section class="hero" id="hero">
+    <img src="img/hospital-bg.png" class="hero-bg" alt="">
+    <div class="hero-content">
+      <p class="hero-eyebrow hero-anim">Case Study — Philips Healthcare</p>
+      <h1 class="hero-question hero-anim">What happens in the 40 minutes before a sleep tech hits <em>process</em>?</h1>
+      <div class="hero-answer hero-anim">
+        <span class="hero-product">XITE</span>
+        <span class="hero-dash">—</span>
+        <span class="hero-desc">Sleep Study AI Scoring Platform</span>
+      </div>
+      <div class="hero-meta hero-anim">
+        <div class="meta-chip"><span class="meta-key">Role</span><span class="meta-val">Lead Designer</span></div>
+        <div class="meta-chip"><span class="meta-key">Duration</span><span class="meta-val">4 Weeks</span></div>
+        <div class="meta-chip"><span class="meta-key">Team</span><span class="meta-val">2 Engineers + PM + SMEs</span></div>
+        <div class="meta-chip"><span class="meta-key">Scope</span><span class="meta-val">End-to-end</span></div>
+      </div>
+    </div>
+    <div class="hero-preview-full hero-anim-img">
+      <img src="img/xite-dashboard.png" alt="XITE Dashboard">
+    </div>
+  </section>
+
+  <!-- Scope strip — credibility at a glance -->
+  <div class="scope-strip">
+    <div class="scope-item">
+      <svg class="scope-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01"/></svg>
+      <span class="scope-label">Company</span>
+      <span class="scope-value">Philips Healthcare</span>
+    </div>
+    <span class="scope-dot"></span>
+    <div class="scope-item">
+      <svg class="scope-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span class="scope-label">Domain</span>
+      <span class="scope-value">Enterprise SaaS</span>
+    </div>
+    <span class="scope-dot"></span>
+    <div class="scope-item">
+      <svg class="scope-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span class="scope-label">Timeline</span>
+      <span class="scope-value">4-week sprint</span>
+    </div>
+    <span class="scope-dot"></span>
+    <div class="scope-item">
+      <svg class="scope-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span class="scope-label">Research</span>
+      <span class="scope-value">6 clinicians</span>
+    </div>
+    <span class="scope-dot"></span>
+    <div class="scope-item">
+      <svg class="scope-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <span class="scope-label">Deliverable</span>
+      <span class="scope-value">React prototype</span>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       01 — THE PROBLEM (compressed, urgent)
+       ========================================== -->
+  <section class="section section--dark" id="problem">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-num">01</span>
+        <h2 class="section-heading">The Problem</h2>
+      </div>
+      <div class="big-num fade-up">3.5h → 45min</div>
+      <p class="big-num-caption fade-up">Per study processing time</p>
+      <blockquote class="quote fade-up">
+        <p>"I spend 40 minutes just checking if channels mapped correctly. If I miss one, the whole study fails."</p>
+        <cite>— Sleep Technologist, Shadow Session</cite>
+      </blockquote>
+
+      <!-- Who has this problem -->
+      <h3 class="subsection-title subsection-title--dark fade-up">Who has this problem</h3>
+
+      <div class="persona-group fade-up">
+        <h4 class="persona-group-label persona-group-label--dark">Clinicians — daily users</h4>
+        <div class="persona-grid">
+          <div class="persona-card persona-card--dark">
+            <div class="persona-header">
+              <div class="persona-avatar"><img src="https://api.dicebear.com/9.x/notionists/svg?seed=Sarah&backgroundColor=transparent" alt=""></div>
+              <div class="persona-info">
+                <h4 class="persona-name persona-name--dark">Dr. Sarah Chen</h4>
+                <p class="persona-role">Sleep Physician & Lead PSG Tech · 15 yrs</p>
+              </div>
+            </div>
+            <div class="persona-traits">
+              <span class="persona-trait">Technical expert</span>
+              <span class="persona-trait">High-volume</span>
+              <span class="persona-trait">Automation-focused</span>
+            </div>
+            <blockquote class="persona-quote persona-quote--dark">"If there is an error we need to trace back and retrieve what went wrong… we need to carefully investigate."</blockquote>
+            <div class="persona-needs persona-needs--dark">
+              <div class="persona-need">
+                <span class="pn-label">Frustration</span>
+                <span class="pn-text pn-text--dark">No error traceability across 3 disconnected tools</span>
+              </div>
+              <div class="persona-need">
+                <span class="pn-label">Goal</span>
+                <span class="pn-text pn-text--dark">Validated automation with full audit trail</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="persona-card persona-card--dark">
+            <div class="persona-header">
+              <div class="persona-avatar"><img src="https://api.dicebear.com/9.x/notionists/svg?seed=Petra&backgroundColor=transparent" alt=""></div>
+              <div class="persona-info">
+                <h4 class="persona-name persona-name--dark">Petra Kovács, RPSGT</h4>
+                <p class="persona-role">Sleep Lab Technologist · AASM SME · 12 yrs</p>
+              </div>
+            </div>
+            <div class="persona-traits">
+              <span class="persona-trait">Validation-first</span>
+              <span class="persona-trait">Standards-driven</span>
+              <span class="persona-trait">Privacy-conscious</span>
+            </div>
+            <blockquote class="persona-quote persona-quote--dark">"Be transparent about which standards are implemented."</blockquote>
+            <div class="persona-needs persona-needs--dark">
+              <div class="persona-need">
+                <span class="pn-label">Frustration</span>
+                <span class="pn-text pn-text--dark">No fallback for missing channels, no progress tracking</span>
+              </div>
+              <div class="persona-need">
+                <span class="pn-label">Goal</span>
+                <span class="pn-text pn-text--dark">AASM-compliant workflow with clear status at every step</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="persona-group fade-up">
+        <h4 class="persona-group-label persona-group-label--dark">Hospital — stakeholder</h4>
+        <div class="persona-grid">
+          <div class="persona-card persona-card--dark">
+            <div class="persona-header">
+              <div class="persona-avatar"><img src="https://api.dicebear.com/9.x/notionists/svg?seed=Hugo&backgroundColor=transparent" alt=""></div>
+              <div class="persona-info">
+                <h4 class="persona-name persona-name--dark">Hugo Vries</h4>
+                <p class="persona-role">Hospital IT & Clinical Operations</p>
+              </div>
+            </div>
+            <div class="persona-traits">
+              <span class="persona-trait">Value-focused</span>
+              <span class="persona-trait">Adoption-minded</span>
+              <span class="persona-trait">Scalability</span>
+            </div>
+            <blockquote class="persona-quote persona-quote--dark">"Very impressed. I see a lot of value for our customers."</blockquote>
+            <div class="persona-needs persona-needs--dark">
+              <div class="persona-need">
+                <span class="pn-label">Frustration</span>
+                <span class="pn-text pn-text--dark">No standardized workflow across hospital departments</span>
+              </div>
+              <div class="persona-need">
+                <span class="pn-label">Goal</span>
+                <span class="pn-text pn-text--dark">Scalable, compliant solution for hospital-wide rollout</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       02 — THE BROKEN WORLD (dark, oppressive)
+       ========================================== -->
+  <section class="section section--dark" id="legacy">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-num">02</span>
+        <h2 class="section-heading">The Broken World</h2>
+      </div>
+      <p class="section-desc fade-up">Three disconnected applications. No shared state. No validation. Every study was a leap of faith.</p>
+      <div class="app-tags app-tags--dark">
+        <span class="app-tag app-tag--dark">PSG Viewer</span>
+        <span class="app-tag app-tag--dark">EDF Import</span>
+        <span class="app-tag app-tag--dark">Report Gen</span>
+      </div>
+
+      <div class="img-viewer" data-group="legacy">
+        <div class="img-viewer-frame img-viewer-frame--dark active" data-img="0">
+          <div class="img-viewer-bar img-viewer-bar--dark">
+            <span class="img-viewer-bar-title">Sleepware G3 — PSG Viewer</span>
+            <span class="img-viewer-bar-badge">1/3</span>
+          </div>
+          <div class="img-annotated">
+            <img src="img/g3-legacy-psg-viewer.png" alt="Legacy PSG Viewer" loading="lazy">
+            <span class="annotation" style="top:8%;left:5%;">No channel validation</span>
+            <span class="annotation" style="top:45%;right:5%;">Manual signal check</span>
+            <span class="annotation" style="bottom:10%;left:15%;">No compliance status</span>
+          </div>
+        </div>
+        <div class="img-viewer-frame img-viewer-frame--dark" data-img="1">
+          <div class="img-viewer-bar img-viewer-bar--dark">
+            <span class="img-viewer-bar-title">Sleepware G3 — EDF Import</span>
+            <span class="img-viewer-bar-badge">2/3</span>
+          </div>
+          <div class="img-annotated">
+            <img src="img/g3-legacy-edf-import.png" alt="Legacy EDF Import" loading="lazy">
+            <span class="annotation" style="top:10%;right:5%;">No auto-detection</span>
+            <span class="annotation" style="bottom:15%;left:10%;">Manual file selection</span>
+          </div>
+        </div>
+        <div class="img-viewer-frame img-viewer-frame--dark" data-img="2">
+          <div class="img-viewer-bar img-viewer-bar--dark">
+            <span class="img-viewer-bar-title">Sleepware G3 — Report</span>
+            <span class="img-viewer-bar-badge">3/3</span>
+          </div>
+          <div class="img-annotated">
+            <img src="img/g3-legacy-report.png" alt="Legacy Report" loading="lazy">
+            <span class="annotation" style="top:8%;left:5%;">No audit trail</span>
+            <span class="annotation" style="bottom:12%;right:8%;">No PHI protection</span>
+          </div>
+        </div>
+        <div class="img-subnav img-subnav--dark">
+          <button class="subnav-btn subnav-btn--dark" data-dir="prev" disabled>&#9664;</button>
+          <span class="subnav-counter subnav-counter--dark">1 / 3</span>
+          <button class="subnav-btn subnav-btn--dark" data-dir="next">&#9654;</button>
+        </div>
+      </div>
+
+      <!-- Journey map — channels, steps, emotional curve -->
+      <h3 class="subsection-title subsection-title--dark">Journey map</h3>
+      <div class="journey-map fade-up">
+        <!-- Phase/channel headers -->
+        <div class="jm-grid jm-header">
+          <div class="jm-col">
+            <span class="jm-channel">G3 PSG Viewer</span>
+            <span class="jm-phase">Review</span>
+          </div>
+          <div class="jm-col">
+            <span class="jm-channel">G3 PSG Viewer</span>
+            <span class="jm-phase">Export</span>
+          </div>
+          <div class="jm-col">
+            <span class="jm-channel">EDF Import Tool</span>
+            <span class="jm-phase jm-phase--pain">Import & Map</span>
+          </div>
+          <div class="jm-col">
+            <span class="jm-channel">Report Generator</span>
+            <span class="jm-phase jm-phase--pain">Submit</span>
+          </div>
+        </div>
+
+        <!-- Steps row -->
+        <div class="jm-grid jm-body">
+          <div class="jm-col">
+            <p>1. Open patient recording</p>
+            <p>2. Review raw signals</p>
+          </div>
+          <div class="jm-col">
+            <p>3. Export EDF file</p>
+            <p>4. Save to local drive</p>
+          </div>
+          <div class="jm-col">
+            <p>5. Close G3, open Import</p>
+            <p>6. Import file (no auto-detect)</p>
+            <p>7. Map channels by hand</p>
+            <p>8. Cross-ref AASM standard</p>
+          </div>
+          <div class="jm-col">
+            <p>9. Open third app</p>
+            <p>10. Submit — no validation</p>
+          </div>
+        </div>
+
+        <!-- Emotional curve -->
+        <div class="jm-emotion">
+          <span class="jm-y-label jm-y-top">Confident</span>
+          <span class="jm-y-label jm-y-bot">Anxious</span>
+          <svg class="jm-curve" viewBox="0 0 800 160" preserveAspectRatio="none" fill="none">
+            <line x1="0" y1="40" x2="800" y2="40" stroke="rgba(255,255,255,0.04)"/>
+            <line x1="0" y1="80" x2="800" y2="80" stroke="rgba(255,255,255,0.04)"/>
+            <line x1="0" y1="120" x2="800" y2="120" stroke="rgba(255,255,255,0.04)"/>
+            <defs>
+              <linearGradient id="curveGrad">
+                <stop offset="0%" stop-color="#4da6ff"/>
+                <stop offset="40%" stop-color="#f59e0b"/>
+                <stop offset="100%" stop-color="#ef4444"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,25 C90,20 140,28 178,35 C220,42 290,50 356,60 C420,90 530,130 622,142 C670,146 750,148 800,152" stroke="url(#curveGrad)" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div class="jm-quote" style="left:5%;bottom:82%">"I know this tool."</div>
+          <div class="jm-quote" style="left:24%;bottom:62%">"Why can't this<br>connect directly?"</div>
+          <div class="jm-quote jm-quote--warn" style="left:50%;bottom:18%">"40 min of tedium.<br>Did I map C3 right?"</div>
+          <div class="jm-quote jm-quote--danger" style="left:80%;bottom:4%">"No validation.<br>Just... hope."</div>
+        </div>
+
+        <!-- Friction points -->
+        <div class="jm-grid jm-foot">
+          <div class="jm-col">
+            <span class="jm-foot-title">Friction</span>
+          </div>
+          <div class="jm-col">
+            <span class="jm-pain">App switch required</span>
+          </div>
+          <div class="jm-col">
+            <span class="jm-pain">No auto-detection</span>
+            <span class="jm-pain">~40 min manual mapping</span>
+            <span class="jm-pain">Manual AASM cross-ref</span>
+          </div>
+          <div class="jm-col">
+            <span class="jm-pain jm-pain--crit">Zero validation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Affinity synthesis (designed, not JPG) -->
+      <div class="affinity fade-up">
+        <div class="affinity-from">
+          <span class="affinity-num">23</span>
+          <span class="affinity-label">pain points from 6 clinicians</span>
+        </div>
+        <div class="affinity-arrow">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="affinity-to">
+          <div class="affinity-cause">
+            <span class="affinity-dot"></span>
+            <span>No validation at any step</span>
+          </div>
+          <div class="affinity-cause">
+            <span class="affinity-dot"></span>
+            <span>Fragmented tools (3 apps, no shared state)</span>
+          </div>
+          <div class="affinity-cause">
+            <span class="affinity-dot"></span>
+            <span>Manual channel mapping (~40 min per study)</span>
+          </div>
+        </div>
+        <div class="affinity-footer">3 root causes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE TURN — THE INSIGHT
+       ========================================== -->
+  <section class="section section--insight" id="insight">
+    <div class="container fade-up">
+      <p class="insight-line dim">They weren't slow.</p>
+      <p class="insight-line bright">They were afraid.</p>
+      <div class="insight-divider"></div>
+      <p class="insight-body">6 clinicians. 4 shadow sessions. 23 pain points that collapsed into 3 root causes: no validation, fragmented tools, and manual channel mapping.</p>
+      <div class="insight-reframe">
+        <div class="reframe-item">
+          <span class="reframe-label">What they asked for</span>
+          <span class="reframe-text">"Make it faster"</span>
+        </div>
+        <span class="reframe-arrow">→</span>
+        <div class="reframe-item">
+          <span class="reframe-label">What they actually needed</span>
+          <span class="reframe-text highlight">"Make it trustworthy"</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       03 — THE SOLUTION (design decisions, not project plan)
+       ========================================== -->
+  <section class="section section--light" id="process">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-num">03</span>
+        <h2 class="section-heading">The Solution</h2>
+      </div>
+      <p class="section-desc fade-up">From shadow sessions to a validated React prototype in 4 weeks. Here's how the research shaped every design decision.</p>
+
+      <!-- Constraints -->
+      <h3 class="subsection-title">The Constraints That Shaped Everything</h3>
+
+      <div class="ct-list fade-up">
+        <div class="ct-item">
+          <span class="ct-num">01</span>
+          <div class="ct-content">
+            <h4 class="ct-title">420-second warm-up</h4>
+            <p class="ct-body">The AI scoring engine needs 7 minutes of buffered signal data before it can produce a single result. You can't show a progress bar for something that hasn't started yet.</p>
+            <p class="ct-response">Phase-based progress — "Buffering signals" → "Scoring sleep stages" → "Generating outputs" — so users understand <em>why</em> it's waiting, not just <em>that</em> it's waiting.</p>
+          </div>
+        </div>
+
+        <div class="ct-item">
+          <span class="ct-num">02</span>
+          <div class="ct-content">
+            <h4 class="ct-title">"Black box" anxiety</h4>
+            <p class="ct-body">The AI team wanted full automation. Clinicians wanted full control. This wasn't an edge case — it was the core tension of the project.</p>
+            <p class="ct-response">AI proposes with confidence scores. Clinician confirms. Every mapping is visible, every override is logged. Trust through transparency.</p>
+          </div>
+        </div>
+
+        <div class="ct-item">
+          <span class="ct-num">03</span>
+          <div class="ct-content">
+            <h4 class="ct-title">Channel naming chaos</h4>
+            <p class="ct-body">Files arrive from global sleep labs with inconsistent names. The same electrode, three different labels — <span class="ct-mono">EMG Mental</span>, <span class="ct-mono">EEG Fp1-A2</span>, <span class="ct-mono">SpO2_Pulse</span> — all needing standardization.</p>
+            <p class="ct-response">AI auto-maps with confidence scores. Ambiguous channels get flagged, not guessed. Clinicians confirm once, save as a Site Profile for future batches.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Before / After -->
+      <h3 class="subsection-title">Before &amp; After</h3>
+      <div class="ba-stats fade-up">
+        <div class="ba-stat">
+          <span class="ba-stat-before">10</span>
+          <span class="ba-stat-after">7</span>
+          <span class="ba-stat-label">Steps</span>
+        </div>
+        <div class="ba-stat">
+          <span class="ba-stat-before">3</span>
+          <span class="ba-stat-after">1</span>
+          <span class="ba-stat-label">Applications</span>
+        </div>
+        <div class="ba-stat">
+          <span class="ba-stat-before">40 min</span>
+          <span class="ba-stat-after">0</span>
+          <span class="ba-stat-label">Manual mapping</span>
+        </div>
+      </div>
+
+      <!-- Design decisions -->
+      <h3 class="subsection-title">Key Design Decisions</h3>
+      <div class="decisions">
+        <div class="decision fade-up">
+          <h3 class="decision-q">How do you prevent errors in a 40-minute manual process?</h3>
+          <p class="decision-a">You don't let them start. A sequential wizard where each step validates before unlocking the next. No skipping. No guessing. The system catches what humans miss.</p>
+          <div class="wizard-flow">
+            <span class="wf-chip">Upload</span><span class="wf-arr">→</span>
+            <span class="wf-chip">Setup</span><span class="wf-arr">→</span>
+            <span class="wf-chip hl">Map</span><span class="wf-arr">→</span>
+            <span class="wf-chip">Lights</span><span class="wf-arr">→</span>
+            <span class="wf-chip hl">Validate</span><span class="wf-arr">→</span>
+            <span class="wf-chip">Process</span>
+          </div>
+        </div>
+
+        <div class="decision fade-up">
+          <h3 class="decision-q">How do you automate channel mapping without removing clinical control?</h3>
+          <p class="decision-a">Worked with the Philips AI team to embed AASM compliance rules directly into the mapping step. The system auto-detects and validates — but the clinician confirms. Trust through transparency, not black-box automation.</p>
+        </div>
+
+        <div class="decision fade-up">
+          <h3 class="decision-q">How do you prove it works before engineering builds it?</h3>
+          <p class="decision-a">Functional React prototype. 3 sleep technologists. Full end-to-end study processing. Zero-assist task completion — no one asked for help, no one got stuck.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       04 — THE PRODUCT (THE CLIMAX — full-bleed dark showcase)
+       ========================================== -->
+  <section class="section section--dark section--showcase" id="product">
+    <div class="showcase-header fade-up">
+      <span class="section-num">04</span>
+      <h2 class="section-heading">The Product</h2>
+    </div>
+
+    <!-- Screen 1: Dashboard -->
+    <div class="showcase-screen scale-in">
+      <p class="showcase-label">Dashboard — Single source of truth</p>
+      <div class="showcase-frame">
+        <img src="img/xite-dashboard.png" alt="XITE Dashboard" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Screen 2: Upload -->
+    <div class="showcase-screen scale-in">
+      <p class="showcase-label">Upload — Instant format validation</p>
+      <div class="showcase-frame">
+        <img src="img/xite-wizard-upload.png" alt="XITE Upload Wizard" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Screen 3: Channel Mapping -->
+    <div class="showcase-screen scale-in">
+      <p class="showcase-label">Channel Mapping — The 40-minute problem, automated</p>
+      <div class="showcase-frame showcase-frame--mock">
+        <div class="mock-window">
+          <div class="mock-toolbar"><div class="mock-dots"><span></span><span></span><span></span></div></div>
+          <div class="mock-content">
+            <div class="mock-wizard-sidebar">
+              <div class="mock-wizard-logo"></div>
+              <div class="mock-wizard-title">New Study</div>
+              <div class="mock-wizard-steps">
+                <div class="wizard-step done"><div class="step-dot done"></div><span>Upload</span></div>
+                <div class="wizard-step done"><div class="step-dot done"></div><span>Study Setup</span></div>
+                <div class="wizard-step active"><div class="step-dot active"></div><span>Channel Mapping</span></div>
+                <div class="wizard-step"><div class="step-dot"></div><span>Lights Timing</span></div>
+                <div class="wizard-step"><div class="step-dot"></div><span>Validation</span></div>
+                <div class="wizard-step"><div class="step-dot"></div><span>Processing</span></div>
+                <div class="wizard-step"><div class="step-dot"></div><span>Complete</span></div>
+              </div>
+            </div>
+            <div class="mock-wizard-main">
+              <div class="mock-wizard-header"><h3>Channel Mapping</h3><p class="txt-muted">Map EDF channels to standard montage derivations</p></div>
+              <div class="mock-validation-bar">
+                <div class="vb-item green"><span class="vb-dot green"></span>G3 Ready</div>
+                <div class="vb-item green"><span class="vb-dot green"></span>ASM Compliant</div>
+                <div class="vb-item amber"><span class="vb-dot amber"></span>1 Warning</div>
+              </div>
+              <div class="mock-channel-table">
+                <div class="ch-header"><span class="ch-col-label">Channel</span><span class="ch-col">Modality</span><span class="ch-col">Mapped To</span><span class="ch-col-sm">Rate</span><span class="ch-col-sm">G3/ASM</span></div>
+                <div class="ch-row"><span class="ch-col-label">EEG F3-A2</span><span class="ch-col"><span class="ch-select">EEG</span></span><span class="ch-col"><span class="ch-select">F3-A2</span></span><span class="ch-col-sm">256 Hz</span><span class="ch-col-sm"><span class="mock-tag green-sm">Pass</span></span></div>
+                <div class="ch-row"><span class="ch-col-label">EEG C3-A2</span><span class="ch-col"><span class="ch-select">EEG</span></span><span class="ch-col"><span class="ch-select">C3-A2</span></span><span class="ch-col-sm">256 Hz</span><span class="ch-col-sm"><span class="mock-tag green-sm">Pass</span></span></div>
+                <div class="ch-row"><span class="ch-col-label">EOG LOC</span><span class="ch-col"><span class="ch-select">EOG</span></span><span class="ch-col"><span class="ch-select">LOC-A2</span></span><span class="ch-col-sm">256 Hz</span><span class="ch-col-sm"><span class="mock-tag neutral-sm">&mdash;</span></span></div>
+                <div class="ch-row warn"><span class="ch-col-label">EMG Chin</span><span class="ch-col"><span class="ch-select">EMG</span></span><span class="ch-col"><span class="ch-select amber-border">Select...</span></span><span class="ch-col-sm">128 Hz</span><span class="ch-col-sm"><span class="mock-tag amber-sm">!</span></span></div>
+              </div>
+              <div class="mock-wizard-footer"><div class="mock-btn secondary">Back</div><div class="mock-btn primary">Confirm Mapping</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 4: Validation -->
+    <div class="showcase-screen scale-in">
+      <p class="showcase-label">Validation — The moment of confidence</p>
+      <div class="showcase-frame showcase-frame--mock">
+        <div class="mock-window">
+          <div class="mock-toolbar"><div class="mock-dots"><span></span><span></span><span></span></div></div>
+          <div class="mock-content validation">
+            <div class="mock-wizard-sidebar small">
+              <div class="mock-wizard-steps compact">
+                <div class="wizard-step done"><div class="step-dot done"></div><span>Upload</span></div>
+                <div class="wizard-step done"><div class="step-dot done"></div><span>Setup</span></div>
+                <div class="wizard-step done"><div class="step-dot done"></div><span>Mapping</span></div>
+                <div class="wizard-step done"><div class="step-dot done"></div><span>Lights</span></div>
+                <div class="wizard-step active"><div class="step-dot active"></div><span>Validation</span></div>
+                <div class="wizard-step"><div class="step-dot"></div><span>Processing</span></div>
+                <div class="wizard-step"><div class="step-dot"></div><span>Complete</span></div>
+              </div>
+            </div>
+            <div class="mock-wizard-main">
+              <div class="mock-wizard-header"><h3>Validation &amp; Audit Record</h3></div>
+              <p class="mock-caption" style="font-size:0.72rem;line-height:1.4;opacity:0.62;margin:0 0 0.75rem;">Designed with 21 CFR Part 11 in mind: every confirmation writes an immutable audit entry — operator ID, timestamp, action type, and montage version — so the record is attributable, traceable, and submission-ready.</p>
+              <div class="validation-cards">
+                <div class="val-card"><div class="val-card-header"><span class="val-icon green">&#10003;</span><span>Lights Timing</span><span class="mock-tag green-sm">Pass</span></div><div class="val-detail">Lights Off: 22:30 — Lights On: 06:15</div></div>
+                <div class="val-card"><div class="val-card-header"><span class="val-icon green">&#10003;</span><span>Pre-Processing</span><span class="mock-tag green-sm">5/5</span></div><div class="val-checks"><div class="val-check"><span class="check-mark">&#10003;</span> PHI stripped</div><div class="val-check"><span class="check-mark">&#10003;</span> EDF integrity</div><div class="val-check"><span class="check-mark">&#10003;</span> Sampling &ge; 200 Hz</div><div class="val-check"><span class="check-mark">&#10003;</span> Filters OK</div><div class="val-check"><span class="check-mark">&#10003;</span> Audit trail active</div></div></div>
+                <div class="val-card"><div class="val-card-header"><span class="val-icon green">&#10003;</span><span>Montage</span><span class="mock-tag green-sm">Ready</span></div><div class="val-checks"><div class="val-check"><span class="check-mark">&#10003;</span> G3: 3/3</div><div class="val-check"><span class="check-mark">&#10003;</span> ASM: Compliant</div></div></div>
+              </div>
+              <div class="mock-notification success"><span class="notif-icon">&#10003;</span>All checks passed. Ready for AI scoring.</div>
+              <div class="mock-wizard-footer"><div class="mock-btn secondary">Back</div><div class="mock-btn primary pulse">Start Processing</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       05 — THE PROOF (billboard)
+       ========================================== -->
+  <section class="section section--dark section--impact" id="impact">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-num">05</span>
+        <h2 class="section-heading">The Proof</h2>
+      </div>
+
+      <!-- Billboard hero metric -->
+      <div class="impact-billboard">
+        <div class="impact-before-big">3.5h</div>
+        <div class="impact-hero-num">45min</div>
+        <div class="impact-hero-lbl">per study processing time</div>
+      </div>
+
+      <!-- Supporting metrics -->
+      <div class="impact-support">
+        <div class="impact-item fade-up">
+          <div class="impact-num">0</div>
+          <div class="impact-lbl">PHI Incidents</div>
+        </div>
+        <div class="impact-item fade-up">
+          <div class="impact-before">~47%</div>
+          <div class="impact-num">90%</div>
+          <div class="impact-lbl">First-Pass</div>
+        </div>
+        <div class="impact-item fade-up">
+          <div class="impact-num">100%</div>
+          <div class="impact-lbl">G3/ASM</div>
+        </div>
+      </div>
+
+      <blockquote class="quote closing-quote">
+        <p>"For the first time, I can see everything is correct before I hit process."</p>
+        <cite>— Lead Sleep Tech, Validation Session</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       06 — REFLECTIONS
+       ========================================== -->
+  <section class="section section--light section--reflections" id="reflections">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-num">06</span>
+        <h2 class="section-heading">What I Learned</h2>
+      </div>
+
+      <div class="learn-grid">
+        <div class="learn-card fade-up">
+          <span class="learn-num">01</span>
+          <div class="learn-content">
+            <h3 class="learn-title">Constraints sharpen design</h3>
+            <p class="learn-body">I cut 3 features that felt essential. But shipping a validated wizard that solves the core problem beats shipping a feature-rich tool that's 60% done.</p>
+          </div>
+        </div>
+        <div class="learn-card fade-up">
+          <span class="learn-num">02</span>
+          <div class="learn-content">
+            <h3 class="learn-title">Users don't want faster — they want safer</h3>
+            <p class="learn-body">Every brief said "reduce time." Shadow sessions revealed they were slow because they were triple-checking. The reframe to "make it trustworthy" changed everything.</p>
+          </div>
+        </div>
+        <div class="learn-card fade-up">
+          <span class="learn-num">03</span>
+          <div class="learn-content">
+            <h3 class="learn-title">Designing with AI = designing the boundaries</h3>
+            <p class="learn-body">AI team wanted full automation. Clinicians wanted full control. The solution: show the AI's work transparently so the clinician can verify and confirm.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="next-strip fade-up">
+        <span class="next-label">If I had 8 more weeks</span>
+        <div class="next-items">
+          <span class="next-item">Batch processing</span>
+          <span class="next-sep">/</span>
+          <span class="next-item">Custom templates</span>
+          <span class="next-sep">/</span>
+          <span class="next-item">Scoring preview</span>
+        </div>
+        <p class="next-desc">Features scoped, validated with users, and ready to build — queued for the next sprint if this project continues.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close">ESC</button>
+    <img id="lightboxImg" src="" alt="Enlarged view">
+  </div>
+
+
+  <script src="script.js?v=47"></script>
+</body>
+</html>

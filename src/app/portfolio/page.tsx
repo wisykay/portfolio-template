@@ -40,7 +40,7 @@ const projects: Project[] = [
     role: "UX Engineer",
     year: "2026",
     category: "healthcare",
-    tags: ["React 18", "AI", "Design System", "FDA/HIPAA"],
+    tags: ["React 18", "AI", "FDA/HIPAA", "21 CFR Part 11", "IEC 62366"],
     impact: "3.5h → 45min processing",
     description:
       "Cloud-native migration of Philips' legacy Somnolyzer sleep scoring software. Designed & built a 7-step guided flow with AI-assisted channel mapping across 17+ physiological signals.",
@@ -48,7 +48,7 @@ const projects: Project[] = [
     thumbnailAlt: "Sleep clinician reviewing XITE platform on laptop in hospital office",
     accentFrom: "#2563eb",
     accentVia: "#0891b2",
-    liveUrl: "https://case-study-lime.vercel.app",
+    liveUrl: "/xite-case-study/index.html",
     featured: true,
   },
   {
@@ -65,7 +65,7 @@ const projects: Project[] = [
     thumbnailAlt: "Wisy field rep in store aisle with AI prep briefing on phone",
     accentFrom: "#059669",
     accentVia: "#16a34a",
-    liveUrl: "https://site-murtu7h29-kays-projects-2782237c.vercel.app",
+    liveUrl: "/wisy-pulse/index.html",
     featured: true,
   },
   {
@@ -130,6 +130,7 @@ const projects: Project[] = [
     thumbnailAlt: "Credit card application form with step-by-step progress",
     accentFrom: "#4f46e5",
     accentVia: "#2563eb",
+    liveUrl: "/portfolio/banco-general-credit-card",
   },
   {
     title: "Nequi P2P Expansion",

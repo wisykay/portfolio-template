@@ -53,6 +53,27 @@
       "updatedAt": "2026-03-27T14:00:34.996Z"
     },
     {
+      "id": "c1df21a7",
+      "question": "What's your experience with 21 CFR Part 11 and electronic records?",
+      "answer": "On XITE, I designed the validation and audit-trail layer with 21 CFR Part 11 attributability requirements in mind. Every time a clinician confirms a step — channel mapping, montage validation, processing — the system writes an immutable audit entry capturing operator ID, timestamp, action type, and the exact montage version reviewed, so the record is attributable, traceable, and submission-ready. To be precise about scope: this was a cloud migration proof-of-concept, so I haven't personally owned a formal, end-to-end Part 11 validation effort with a full IQ/OQ/PQ package — but I designed the UX and the audit infrastructure to align with how Part 11 electronic records and electronic signatures need to behave. I'm comfortable working inside that regulatory framework and ramping quickly on eSignature, eConsent, or eCOA workflows where Part 11 is the core requirement.",
+      "category": "projects",
+      "tags": [
+        "21 cfr part 11",
+        "compliance",
+        "audit trail",
+        "electronic records",
+        "esignature",
+        "regulatory",
+        "philips",
+        "xite",
+        "medical"
+      ],
+      "qualityScore": 5,
+      "source": "seed",
+      "createdAt": "2026-06-16T14:00:00.000Z",
+      "updatedAt": "2026-06-16T14:00:00.000Z"
+    },
+    {
       "id": "b8acca6f",
       "question": "How do you handle stakeholders?",
       "answer": "I've developed a few approaches over the years. At CI&T, I ran discovery and executive workshops where I translated cross-functional inputs from engineering, product, and business into shared narratives, flows, and specifications — getting everyone aligned before we started building. At Banco General, I worked closely with compliance and legal teams on banking onboarding and KYC flows, establishing trust-first copy and ensuring every design decision aligned with regulatory requirements. At GoBeyond, I partnered directly with marketing on thought leadership and campaign templates. My general approach is: listen first, synthesize what I hear into something visual (a flow, a journey map, a prototype), then bring it back for validation. Visuals cut through ambiguity faster than meetings.",
@@ -143,7 +164,7 @@
     {
       "id": "043ab570",
       "question": "Tell me about your work at Philips or XITE",
-      "answer": "At Amaris Consulting (Jan 2026–present), I'm leading frontend UX engineering for XITE — a cloud-native proof-of-concept migrating Philips' legacy Somnolyzer sleep scoring software to AWS. I designed and built the frontend using React 18, Vite, and the Philips Filament Design System. Key deliverables include: a 7-step guided flow for processing EDF polysomnography studies, an intelligent channel mapping interface supporting 17+ physiological signals with AI-assisted confidence scoring, a study management dashboard with DataGrid architecture, and audit trail infrastructure for FDA/HIPAA compliance. I also defined UX logic for G3/ASM montage compliance and sampling thresholds, implemented responsive layouts with dark mode, and produced detailed UX specifications to align engineering, clinical, and product stakeholders. The live case study is at https://case-study-lime.vercel.app",
+      "answer": "At Amaris Consulting (Jan 2026–present), I'm leading frontend UX engineering for XITE — a cloud-native proof-of-concept migrating Philips' legacy Somnolyzer sleep scoring software to AWS. I designed and built the frontend using React 18, Vite, and the Philips Filament Design System. Key deliverables include: a 7-step guided flow for processing EDF polysomnography studies, an intelligent channel mapping interface supporting 17+ physiological signals with AI-assisted confidence scoring, a study management dashboard with DataGrid architecture, and audit trail infrastructure for FDA/HIPAA compliance. I also defined UX logic for G3/ASM montage compliance and sampling thresholds, implemented responsive layouts with dark mode, and produced detailed UX specifications to align engineering, clinical, and product stakeholders. The live case study is at https://kayilo.netlify.app/xite-case-study/",
       "category": "projects",
       "tags": [
         "philips",
@@ -360,7 +381,7 @@
     {
       "id": "185cc3d8",
       "question": "Show me your projects",
-      "answer": "I'd be happy to share some of my projects! Here are a few key ones:\n\n*   **[XITE — Sleep Study AI Platform](https://case-study-lime.vercel.app)**: At Amaris Consulting, I led the frontend UX engineering and prototyping for XITE, a cloud-native platform migrating Philips' legacy Somnolyzer sleep scoring software. This AI-powered 7-step wizard significantly reduced processing time for sleep studies.\n*   **Wisy — AI Retail Execution**: Currently, as a consultant with Wisy, I'm designing AI-powered experiences for a B2B SaaS portal and the Wisy Pulse mobile app. This includes computer vision shelf analysis, guided store visits, and human-in-the-loop review steps.\n*   **[Gustazos Merchant Dashboard](https://gustazos-dashboard-b17iedefk-kays-projects-2782237c.vercel.app)**: This was a project to create a Stripe-style merchant analytics dashboard for Gustazos, a LATAM deals platform. It features KPI cards, revenue charts, and customer analytics.\n*   **GoBeyond Marketplace & Loyalty**: During my time as UX Lead at GoBeyond Group, I directed the web and product experience across loyalty, partner landing pages, and gift card flows. I also established a component library and design tokens using Tailwind and React.\n*   **Banco General eBanking**: As a Senior UX Designer at Banco General, I led web journeys for onboarding, KYC, credit acquisition, and servicing, focusing on trust-first copy and compliance.\n\nWould you like me to elaborate on any of these, or perhaps discuss a project in a specific area like mobile UX or design systems?",
+      "answer": "I'd be happy to share some of my projects! Here are a few key ones:\n\n*   **[XITE — Sleep Study AI Platform](https://kayilo.netlify.app/xite-case-study/)**: At Amaris Consulting, I led the frontend UX engineering and prototyping for XITE, a cloud-native platform migrating Philips' legacy Somnolyzer sleep scoring software. This AI-powered 7-step wizard significantly reduced processing time for sleep studies.\n*   **Wisy — AI Retail Execution**: Currently, as a consultant with Wisy, I'm designing AI-powered experiences for a B2B SaaS portal and the Wisy Pulse mobile app. This includes computer vision shelf analysis, guided store visits, and human-in-the-loop review steps.\n*   **[Gustazos Merchant Dashboard](https://gustazos-dashboard.netlify.app)**: This was a project to create a Stripe-style merchant analytics dashboard for Gustazos, a LATAM deals platform. It features KPI cards, revenue charts, and customer analytics.\n*   **GoBeyond Marketplace & Loyalty**: During my time as UX Lead at GoBeyond Group, I directed the web and product experience across loyalty, partner landing pages, and gift card flows. I also established a component library and design tokens using Tailwind and React.\n*   **Banco General eBanking**: As a Senior UX Designer at Banco General, I led web journeys for onboarding, KYC, credit acquisition, and servicing, focusing on trust-first copy and compliance.\n\nWould you like me to elaborate on any of these, or perhaps discuss a project in a specific area like mobile UX or design systems?",
       "category": "projects",
       "tags": [
         "show",
